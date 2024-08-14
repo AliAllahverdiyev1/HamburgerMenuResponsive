@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.nav-links a{
+    transition: 1s;
+}
+.nav-links a:hover{
+    color: rgb(255, 166, 103);
+    
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    background-color: #a71930;
+    color: #eee;
+    font-family: 'Roboto', sans-serif;
+}
+.nav-logo{
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+.nav-links a{
+    
+    color: #eee;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger .line1,
+.burger .line2,
+.burger .line3{
+    width: 24px;
+    height: 3px;
+    background-color: #eee;
+    transition: 2s ease;
+}
+.burger .line2{
+    margin: 3px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .burger {
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        top: 8vh;
+        right: 0; 
+        height: 92vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #a71930;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: .5s ease;
+        overflow: auto;
+    }
+    
+    .nav-links li{
+        opacity: 0;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 998;
+    }
+}
+
+.nav-active{
+    transform: translateX(0);
+}
+
+.close .line1{
+transform: rotate(-45deg);
+translate: -5px 8px;
+transition: 2s ease;
+}
+.close .line2{
+opacity: 0;
+}
+.close .line3{
+    transform: rotate(45deg) ;
+    translate: -5px -3px;
+    transition: 2s ease;
+}
+
+@keyframes linksFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
